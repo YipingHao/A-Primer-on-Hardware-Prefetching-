@@ -3,7 +3,7 @@
 # 1.1 存储墙
 
 <figure>
-  <img src="./graphics/1_1.png" alt="1_1.png">
+  <img src="./graphics/1_1.png" alt="1_ 1.png">
   <figcaption>日益增长的处理器性能和存储器性能的差距，来自引文[3]。</figcaption>
 </figure>
 
