@@ -7,8 +7,8 @@
 下一行预取[5] 是指令预取最简单的形式，它在大多数现代处理器设计中很常见。由于代码按顺序排列在内存中的连续地址处，因此指令高速缓存中查找的一半以上是针对连续地址的。 生成连续地址并获取它们所需的逻辑最少，并且可以轻松地集成到处理器和高速缓存层次结构中。 
 
 <figure>
-  <img src="./graph/2_1.png" alt="1_ 1.png">
-  <figcaption>一个下一行预取器。</figcaption>
+  <img src="./graph/2_1.png" alt="2.1.png">
+  <figcaption>图2.1：一个下一行预取器。</figcaption>
 </figure>
 
 
@@ -21,8 +21,8 @@
 下一行预取器非常有效且高效，但只有 50% 的指令查找是顺序执行。控制流指令会破坏连续获取并导致获取中的不连续，并因此需要预测未来的控制流程和提前查看。
 
 <figure>
-  <img src="./graph/2_2.png" alt="1_ 1.png">
-  <figcaption>一个下一行预取器。</figcaption>
+  <img src="./graph/2_2.png" alt="2.2.png">
+  <figcaption>图2.2：指令取指示例：(a) 顺序取指，(b) 由于 if 语句和循环导致的不连续取指，(c) 由于函数调用导致的不连续取指。来源：[7]。</figcaption>
 </figure>
 
 
