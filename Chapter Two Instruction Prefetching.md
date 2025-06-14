@@ -32,7 +32,7 @@
 
 <figure>
   <img src="./graph/2_3.png" alt="1_ 1.png">
-  <figcaption>一个下一行预取器。</figcaption>
+  <figcaption>图2.3：面向取指的指令预取。来源：[12]</figcaption>
 </figure>
 
 
@@ -40,12 +40,12 @@
 
 <figure>
   <img src="./graph/2_4.png" alt="1_ 1.png">
-  <figcaption>一个下一行预取器。</figcaption>
+  <figcaption>图2.4：类似于FDIP的预取器在商业服务器应用中的有效性，与下一行预取和理想L1缓存进行对比。数据来源：[7]。</figcaption>
 </figure>
 
 <figure>
   <img src="./graph/2_5.png" alt="1_ 1.png">
-  <figcaption>一个下一行预取器。</figcaption>
+  <figcaption>图2.5：为实现4次缺失的前瞻所需的正确分支预测。数据来源：[7]。</figcaption>
 </figure>
 
 
@@ -61,7 +61,7 @@
 
 <figure>
   <img src="./graph/2_6.png" alt="1_ 1.png">
-  <figcaption>一个下一行预取器。</figcaption>
+  <figcaption>图2.6：一种不连续性预测器。</figcaption>
 </figure>
 
 
@@ -76,7 +76,7 @@
 
 <figure>
   <img src="./graph/2_7.png" alt="1_ 1.png">
-  <figcaption>一个下一行预取器。</figcaption>
+  <figcaption>图2.7：时间指令取指流。来源：[7]。</figcaption>
 </figure>
 
 
@@ -95,6 +95,6 @@
 
 <figure>
   <img src="./graph/T2_1.png" alt="1_ 1.png">
-  <figcaption>一个下一行预取器。</figcaption>
+  <figcaption>表2.1：指令预取技术总结</figcaption>
 </figure>
 
