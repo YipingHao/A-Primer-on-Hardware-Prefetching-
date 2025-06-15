@@ -131,3 +131,55 @@ Nesbit 和 Smith 在他们的全球历史缓冲区中引入了一个关键进步
 
 在GHB组织中，一个挑战是在确定何时停止跟踪流时，即当预取器不再需要从历史缓冲区中提取额外地址时。许多基于GHB组织的建议（例如[42]）都没有尝试预测流的结束。相反，它们为每个成功的索引表查找分配一个流缓冲区，并继续跟踪流，只要它继续提供预取命中。通过最近最少使用替换等方法，对不再有用的流分配的流缓存进行回收。We-nisch讨论了随着流被跟踪而自适应地调整流预读速率的问题[42]。
 
+
+### 3.2.8 STREAM CHAINING
+
+
+### 3.2.9 TEMPORAL MEMORY STREAMING
+
+
+### 3.2.10 IRREGULAR STREAM BUFFER
+
+
+## 3.3 SPATIALLY CORRELATED PREFETCHING
+
+### 3.3.1 DELTA-CORRELATED LOOKUP
+
+### 3.3.2 GLOBAL HISTORY BUFFER PC-LOCALIZED/DELTA-CORRELATING (GHB PC/DC)
+
+### 3.3.3 CODE-CORRELATED LOOKUP
+
+### 3.3.4 SPATIAL FOOTPRINT PREDICTION
+
+### 3.3.5 SPATIAL PATTERN PREDICTION
+
+### 3.3.6 STEALTH PREFETCHING
+
+### 3.3.7 SPATIAL MEMORY STREAMING
+
+### 3.3.8 SPATIO-TEMPORAL MEMORY STREAMING
+
+
+## 3.4 EXECUTION-BASED PREFETCHING
+
+### 3.4.1 ALGORITHM SUMMARIZATION
+
+一些预取技术总结了遍历数据结构的指令序列，以便比主线程更快地执行预取数据结构元素。 Roth 和合著者提出了一个机制[44][45]，该机制通过识别指针加载（解引用指针的加载指令）并连接它们的依赖关系链来完全在硬件中汇总遍历。然后，硬件将这些依赖关系编码为紧凑的状态机，可以比指令执行更快地迭代依赖项加载序列。 Annavaram、Patel 和 Davidson 提出了一个通用机制，用于在硬件中提取程序依赖图——导致丢失加载的子集，并在专用预计算引擎中执行这些图[92]。
+
+### 3.4.2 HELPER-THREAD AND HELPER-CORE APPROACHES
+
+### 3.4.3 抢先执行 RUN-AHEAD EXECUTION
+
+抢先执行利用一个核心通常会在长延时事件（例如芯片外缓存未命中）上阻塞的执行资源，在阻塞的执行之前尝试着去发现额外的负载未命中的情况以及温暖的分支预测。抢先的想法是在核心阻塞的时候捕获一个执行状态快照，然后跳过阻塞指令继续获取并执行推测出来的指令流。依赖于不完整指令的数据相关指令不会被执行（例如通过重命名寄存器机制传播被污染的标记）。当长延时事件解决（例如原始缺失已返回）时，从快照中恢复执行状态并且让原来的执行继续，跨过抢先模式下探索过的指令重新执行。这种方案的主要好处是对长延时负载提供了prefetching效果。Dundas 和 Mudge首次在顺序执行的核心架构中提议抢先（102）。Mutlu等人针对非阻塞处理器探讨了高效的实现(103, 104, 105, 106)。最近，作者们研究了在长延时负载返回后不丢弃推测执行结果的非阻塞流水线微体系结构，而是只重新执行那些相关的指令（107, 108）。
+
+### 3.4.4 CONTEXT RESTORATION
+
+### 3.4.5 COMPUTATION SPREADING
+
+## 3.5 PREFETCH MODULATION AND CONTROL
+
+
+
+## 3.6  软件方法 SOFTWARE APPROACHES
+
+研究人员已经提出了许多其他方法来处理编译器或程序员插入的预取指令（例如，[41, 43, 120, 121, 122, 123）] 或数据前推操作[124,125]。最近，研究人员开发了架构[126, 127] 和编程语言[128, 129]，它们提供了直接表达和操纵数据流的结构。然而，这些研究主要集中在多媒体应用程序上，在这种情况下，应用程序输入自然地映射到数据序列。目前尚不清楚如何在其他情况下利用这些进展，例如商业服务器软件。对软件和编译器数据预读技术的全面探索超出了本综合讲座的范围。
