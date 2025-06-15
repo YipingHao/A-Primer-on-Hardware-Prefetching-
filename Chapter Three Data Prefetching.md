@@ -51,7 +51,7 @@ Markov 预取器 [49, 50] 是利用地址对之间的相关性设计的最简单
 
 <figure>
   <img src="./graph/3_2.png" alt="3_2.png">
-  <figcaption>图3.2：[49]中描述的马尔可夫预取器。 /figcaption>
+  <figcaption>图3.2：[49]中描述的马尔可夫预取器。 </igcaption>
 </figure>
 
 
